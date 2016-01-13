@@ -8,14 +8,14 @@ using Microsoft.WindowsAzure.Storage.Blob;
 using WebAppForArmDemo.Models;
 using System.IO;
 
-namespace WebAppForArmDemo.DAL
+namespace WebAppForArmDemo.Utils
 {
-    public class PhotoItemContext
+    public class PhotoInBlob
     {
         CloudStorageAccount storageAccount;
         CloudBlobClient blobClinet;
         CloudBlobContainer blobContainer;
-        public PhotoItemContext()
+        public PhotoInBlob()
         {
             storageAccount = CloudStorageAccount.Parse(ConfigurationManager.ConnectionStrings["StorageConnection"].ConnectionString);
             blobClinet = storageAccount.CreateCloudBlobClient();

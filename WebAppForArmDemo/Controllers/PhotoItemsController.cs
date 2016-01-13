@@ -4,14 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using WebAppForArmDemo.DAL;
+using WebAppForArmDemo.Utils;
 using WebAppForArmDemo.Models;
 
 namespace WebAppForArmDemo.Controllers
 {
     public class PhotoItemsController : Controller
     {
-        private PhotoItemContext context = new PhotoItemContext();
+        private PhotoInBlob context = new PhotoInBlob();
         // GET: PhotoItem
         public ActionResult Index()
         {
